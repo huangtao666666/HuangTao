@@ -26,7 +26,7 @@ public class BackUserController {
        return "backendlogin";
     }
 
-    @RequestMapping("dologin")
+    @RequestMapping("/dologin")
     String dologin(@RequestParam String userCode, @RequestParam String userPassword, HttpServletRequest request, HttpSession session){
         logger.debug("===================================");
         BackendUser user = null;

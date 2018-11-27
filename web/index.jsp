@@ -26,7 +26,7 @@
 
 <body class="login">
 <div class="login_wrapper">
-  <h1>APP信息管理平台</h1>
+  <h1>APP信息管理平台</h1>3.3
   <div>
     <a href="guanli/login" class="btn btn-link">后台管理系统 入口</a>
   </div>
