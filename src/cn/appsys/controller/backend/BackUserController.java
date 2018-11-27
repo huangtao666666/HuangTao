@@ -3,6 +3,7 @@ package cn.appsys.controller.backend;
 import cn.appsys.pojo.BackendUser;
 import cn.appsys.service.backend.BackendUserService;
 import cn.appsys.tools.Constants;
+import jdk.nashorn.internal.ir.IfNode;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -43,6 +44,15 @@ public class BackUserController {
             return "backendlogin";
         }
     }
+
+    @RequestMapping("backend/main")
+    String main(HttpSession session){
+        if(session.getAttribute(Constants.USER_SESSION)==null){
+            return "redirect:/guanli/login";
+        }
+        return "backend/main";
+    }
+
 
     @RequestMapping(value="/logout")
     public String logout(HttpSession session){
